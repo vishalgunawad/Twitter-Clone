@@ -12,11 +12,11 @@ const Navbar = () => {
   const [selectedTag, setSelectedTag] = useState(0);
 
   return (
-    <header className="flex flex-col w-2/5 px-5 pt-5">
+    <header className="flex flex-col w-2/5 px-4 pt-5">
       <NavLink to="/home" onClick={() => setSelectedTag(0)}>
-        <img src={logo} alt="X" className="h-12 ml-6" />
+        <img src={logo} alt="X" className="h-12 ml-8" />
       </NavLink>
-      <nav className="flex flex-col gap-5 mt-5  justify-center">
+      <nav className="flex flex-col gap-5 mt-8  justify-center">
         <NavLink to="/home" onClick={() => setSelectedTag(0)}>
           <NavContainer
             title="Home"
