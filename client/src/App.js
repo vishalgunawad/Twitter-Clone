@@ -1,10 +1,17 @@
-import './App.css';
+import "./App.css";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Home from "./Pages/Home";
 
 function App() {
   return (
-    <div className="App">
-      <a href="http://localhost:8080/express">Check express is Working</a>
-    </div>
+    <main>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+        </Routes>
+      </Router>
+    </main>
   );
 }
 
