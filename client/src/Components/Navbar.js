@@ -7,16 +7,18 @@ import msgIcon from "./../Assets/msg.svg";
 import profileIcon from "./../Assets/profile.svg";
 import { NavLink } from "react-router-dom";
 import NavContainer from "./NavContainer";
+import CustomBlueBtn from "./CustomBlueBtn";
+import AccountMenu from "./AccountMenu";
 
 const Navbar = () => {
   const [selectedTag, setSelectedTag] = useState(0);
 
   return (
-    <header className="flex flex-col w-2/5 px-4 pt-5">
+    <header className="flex flex-col w-1/3 px-4 pt-5 h-screen">
       <NavLink to="/home" onClick={() => setSelectedTag(0)}>
         <img src={logo} alt="X" className="h-12 ml-8" />
       </NavLink>
-      <nav className="flex flex-col gap-5 mt-8  justify-center">
+      <nav className="flex flex-col gap-5 mt-8  justify-top flex-1">
         <NavLink to="/home" onClick={() => setSelectedTag(0)}>
           <NavContainer
             title="Home"
@@ -52,7 +54,17 @@ const Navbar = () => {
             selected={selectedTag === 4}
           />
         </NavLink>
+        <NavLink
+          to="/"
+          // onClick={() => setSelectedTag(4)}
+          className="flex justify-center pl-5"
+        >
+          <CustomBlueBtn text="Post" />
+        </NavLink>
       </nav>
+      <div className="mb-2">
+        <AccountMenu />
+      </div>
     </header>
   );
 };
