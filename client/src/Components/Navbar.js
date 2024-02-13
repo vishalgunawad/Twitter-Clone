@@ -14,7 +14,7 @@ const Navbar = () => {
   const [selectedTag, setSelectedTag] = useState(0);
 
   return (
-    <header className="flex flex-col w-1/3 px-4 pt-5 h-screen">
+    <header className="flex flex-col w-full px-4 pt-5 h-screen">
       <NavLink to="/home" onClick={() => setSelectedTag(0)}>
         <img src={logo} alt="X" className="h-12 ml-8" />
       </NavLink>
